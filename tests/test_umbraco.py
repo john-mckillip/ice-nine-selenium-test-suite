@@ -13,7 +13,7 @@ def umbraco_login_url():
 @pytest.mark.usefixtures("umbraco_login_url")
 class TestUmbraco:
     def test_umbraco_login_loads(self, browser, umbraco_login_url):
-        umbracoLogin = UmbracoLoginPage(browser)
-        umbracoLogin.open(umbraco_login_url)
+        umbraco_login = UmbracoLoginPage(browser)
+        umbraco_login.open(umbraco_login_url)
         assert "Umbraco" in browser.title
 
